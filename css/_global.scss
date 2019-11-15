@@ -14,11 +14,26 @@ body {
     line-height: 1.3;
     font-family: $font__primary;
     color: $lightGray;
+
+    @include breakpoint (large) {
+        font-size: 1.15rem;
+    }
 }
 
 h1, h2, h3 {
     color: $darkGray;
     font-weight: 600;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    
+    @include breakpoint (large) {
+        font-size: 2.5rem;
+       
+    }
 }
 
 button, .button {
@@ -30,6 +45,10 @@ button, .button {
     padding: 16px 40px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
+
+    @include breakpoint-less (small) {
+        width: 100%;
+    }
 
     &.cyan {
         background-color: $cyan;
@@ -52,6 +71,30 @@ button, .button {
     }
 }
 
+// Helper
+
+.wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 157px;
+
+    @include breakpoint (large) {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 142px;
+    }
+    
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .content {
+        max-width: 700px;
+    }
+}
 
 
 
