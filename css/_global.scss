@@ -31,8 +31,17 @@ h1 {
     margin-bottom: 25px;
     
     @include breakpoint (large) {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
        
+    }
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint (large) {
+        font-size: 2.125rem;
     }
 }
 
@@ -94,6 +103,31 @@ button, .button {
     .content {
         max-width: 700px;
     }
+}
+
+// P tags
+p {
+    margin-top: 0px;
+}
+p.large {
+    font-size: 1.25rem;
+}
+
+p.medium {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+p.small {
+    font-size: 1rem;
+}
+.margin-bottom {
+    margin-bottom: 50px;
+    line-height: 1.6rem;
+}
+
+.lg-margin-bottom {
+    margin-bottom: 80px;
 }
 
 
