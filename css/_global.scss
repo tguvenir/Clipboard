@@ -3,8 +3,10 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +22,9 @@ body {
     }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: $darkGray;
     font-weight: 600;
     margin-top: 0px;
@@ -29,10 +33,10 @@ h1, h2, h3 {
 h1 {
     font-size: 1.5rem;
     margin-bottom: 25px;
-    
+
     @include breakpoint (large) {
         font-size: 2.75rem;
-       
+
     }
 }
 
@@ -45,7 +49,8 @@ h2 {
     }
 }
 
-button, .button {
+button,
+.button {
     position: relative;
     border-radius: 30px;
     color: #ffffff;
@@ -85,14 +90,14 @@ button, .button {
 .wrapper {
     padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 157px;
+    padding-bottom: 95px;
 
     @include breakpoint (large) {
         padding-left: 0px;
         padding-right: 0px;
         padding-bottom: 142px;
     }
-    
+
 }
 
 .centered {
@@ -100,8 +105,20 @@ button, .button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    .content {
-        max-width: 700px;
+
+}
+
+.content {
+    max-width: 700px;
+
+    img {
+        width: 100%;
+        height: auto;
+
+        &.medium {
+            max-width: 800px;
+            
+        }
     }
 }
 
@@ -109,18 +126,25 @@ button, .button {
 p {
     margin-top: 0px;
 }
+
 p.large {
     font-size: 1.25rem;
 }
 
 p.medium {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @include breakpoint(large) {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
 }
 
 p.small {
     font-size: 1rem;
 }
+
 .margin-bottom {
     margin-bottom: 50px;
     line-height: 1.6rem;
@@ -130,5 +154,12 @@ p.small {
     margin-bottom: 80px;
 }
 
+.xlg-margin-bottom {
+    margin-bottom: 35px;
 
+    @include breakpoint(large) {
+        margin-bottom: 80px;
 
+    }
+
+}
