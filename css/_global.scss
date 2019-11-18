@@ -16,9 +16,18 @@ body {
     line-height: 1.3;
     font-family: $font__primary;
     color: $lightGray;
+    background-image: url(../images/bg-header-mobile.png);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
 
+    @include breakpoint (medium) {
+        background-image: url(../images/bg-header-desktop.png);
+    }
     @include breakpoint (large) {
         font-size: 1.15rem;
+        padding-bottom: 40vh;
+        
     }
 }
 
@@ -91,10 +100,10 @@ button,
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 95px;
+    max-width: 1112px;
+    margin: auto;
 
     @include breakpoint (large) {
-        padding-left: 0px;
-        padding-right: 0px;
         padding-bottom: 142px;
     }
 
@@ -143,6 +152,8 @@ p.medium {
 
 p.small {
     font-size: 1rem;
+    line-height: 1.75rem;
+    max-width: 350px;
 }
 
 .margin-bottom {

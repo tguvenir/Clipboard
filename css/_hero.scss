@@ -1,11 +1,8 @@
 .hero {
     padding-top: 120px;
-    background-image: url(../images/bg-header-mobile.png);
-    background-size: cover;
-    background-position: center top;
+    
 
-    @include breakpoint(medium) {
-        background-image: url(../images/bg-header-desktop.png);        
+    @include breakpoint(medium) { 
         padding-top: 130px;
     }
  
