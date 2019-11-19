@@ -21,7 +21,7 @@
         margin-bottom: 60px;
 
         @include breakpoint (large) {
-            
+            margin-bottom: 50px;
         }
 
         &__icon {

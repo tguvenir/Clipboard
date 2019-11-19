@@ -1,0 +1,26 @@
+.sponsors {
+
+    &__container {
+
+        @include breakpoint (large) {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 54px;
+
+            @include breakpoint (large) {
+                margin-bottom: 0px;
+
+            }
+        }
+
+    }
+}
